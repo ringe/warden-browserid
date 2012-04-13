@@ -28,6 +28,8 @@ config/initializers/devise.rb in Rails:
   end
 ```
 
+See the devise-browserid gem for client side action.
+
 ## Contributing
 
 1. Fork it
