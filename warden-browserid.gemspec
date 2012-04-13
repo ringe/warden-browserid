@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["runar@rin.no"]
   gem.description   = %q{Warden BrowserID strategy}
   gem.summary       = %q{Authenticate your Warden-enabled app using BrowserID from Mozilla}
-  gem.homepage      = "http://rin.no"
+  gem.homepage      = "https://github.com/ringe/warden-browserid"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
