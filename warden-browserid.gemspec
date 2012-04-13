@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "warden-browserid"
   gem.require_paths = ["lib"]
   gem.version       = Warden::BrowserId::VERSION
+
+  gem.add_dependency "warden"
 end

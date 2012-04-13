@@ -34,7 +34,7 @@ module Warden
 
       # Select BrowserID verifier instance from options
       def self.browserid_url
-        env['warden'].config.browserid_url || "dev.diresworb.org"
+        request.env['warden'].config.browserid_url || "dev.diresworb.org"
       end
     end
   end
