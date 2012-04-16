@@ -1,5 +1,5 @@
 module Warden
-  class Config
+  class Config < Hash
     hash_accessor :browserid_url
   end
 end

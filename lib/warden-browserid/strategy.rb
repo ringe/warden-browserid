@@ -11,7 +11,7 @@ module Warden
         return false unless params[:assertion]
 
         # Prepare the HTTP request
-        http = Net::HTTP.new(browserid_url, 443)
+        http = Net::HTTP.new(Strategy.browserid_url, 443)
         http.use_ssl = true
         req = Net::HTTP::Post.new("/verify")
         req.set_form_data( { assertion: params[:assertion], audience: request.host_with_port } )
@@ -34,7 +34,11 @@ module Warden
 
       # Select BrowserID verifier instance from options
       def self.browserid_url
-        request.env['warden'].config.browserid_url || "dev.diresworb.org"
+        begin
+          request.env['warden'].config.browserid_url
+        rescue NameError
+          "dev.diresworb.org"
+        end
       end
     end
   end
