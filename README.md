@@ -26,20 +26,23 @@ config/initializers/devise.rb in Rails:
     manager.default_strategies(:scope => :user).unshift :browserid
   end
 ```
-See the [Warden wiki] for other usage. The following option is
-available, since [Mozilla] [1] says to use BrowserID as follows:
+
+See the [Warden wiki] [1] for other usage. The following option is
+available, since [Mozilla] [2] says to use BrowserID as follows:
+
 ```ruby
-    # manager.browserid_url = "dev.diresworb.org"  # Development
-(default)
-    # manager.browserid_url = "diresworb.org"      # Beta
-    # manager.browserid_url = "browserid.org"      # Production
+ manager.browserid_url = "dev.diresworb.org"  # Development (default)
+ # manager.browserid_url = "diresworb.org"      # Beta
+ # manager.browserid_url = "browserid.org"      # Production
+ 
 ```
 
-I use the [devise-browserid] gem
+I use the [devise-browserid] [3] gem
 to enable client side action for BrowserID.
 
 [1]: https://github.com/hassox/warden/wiki/Setup "Warden wiki"
-[2]: https://github.com/ringe/devise-browserid "devise-browserid"
+[2]: https://developer.mozilla.org/en/BrowserID/Primary/Developer_tips "Mozilla"
+[3]: https://github.com/ringe/devise-browserid "devise-browserid"
 
 ## Contributing
 
