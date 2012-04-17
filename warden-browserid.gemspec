@@ -16,4 +16,5 @@ Gem::Specification.new do |gem|
   gem.version       = Warden::BrowserId::VERSION
 
   gem.add_dependency "warden"
+  gem.add_dependency "rake"
 end
