@@ -1,4 +1,5 @@
 require 'net/https'
+require 'warden'
 
 module Warden
   module BrowserId
@@ -21,6 +22,7 @@ module Warden
 
         json = JSON.parse response.body
         @asserted = json
+        puts @asserted
 
         # Return true if asserted email and audience is right
         json["status"] == "okay" and json["audience"] == request.host_with_port
