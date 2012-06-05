@@ -29,7 +29,7 @@ module Warden
       end
 
       # Authenticate user if email was verified
-      def authenticate! 
+      def authenticate!
         u = User.find_by_email(@asserted["email"])
         u.nil? ? fail!("The given email is not registered for this system.") : success!(u)
       end
