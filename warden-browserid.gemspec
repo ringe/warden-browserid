@@ -4,7 +4,7 @@ require File.expand_path('../lib/warden-browserid/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["ringe"]
   gem.email         = ["runar@rin.no"]
-  gem.description   = %q{Warden BrowserID strategy}
+  gem.description   = %q{Warden BrowserID strategy - DISCONTINUED}
   gem.summary       = %q{Authenticate your Warden-enabled app using BrowserID from Mozilla}
   gem.homepage      = "https://github.com/ringe/warden-browserid"
 
